@@ -1,0 +1,12 @@
+@import url(reset.css);
+
+:root {
+  font-size: 18px;
+  --font-size-L: 1.6rem;
+  font-family: sans-serif;
+}
+
+a {
+  display: contents;
+  width: fit-content
+}
