@@ -1,12 +1,11 @@
 import { CartProvider } from '@/providers/CartProvider';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { Products } from '@/pages/Products'
 import ProductInfo from '@/pages/ProductInfo'
 import Orders from '@/components/Orders';
 import { Cart } from '@/pages/Cart';
 import { Navigate } from 'react-router-dom';
 import { Page } from './styled/1/Page';
-import { css } from '@emotion/react';
 import { LoginForm } from './components/1/LoginForm';
 import styled from '@emotion/styled'
 import { NavigationLayout } from './styled/2/NavigationLayout';

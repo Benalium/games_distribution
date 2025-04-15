@@ -12,8 +12,7 @@ function createWindow() {
         },
     });
     // Load the Vite-built index.html from the dist folder
-    win.loadURL('http://localhost:5173')
-    // win.loadFile(path_1.default.join(__dirname, '../dist/index.html'));
+    win.loadFile(path_1.join(__dirname, '../dist/index.html'));
 }
 electron_1.app.whenReady().then(function () {
     createWindow();
