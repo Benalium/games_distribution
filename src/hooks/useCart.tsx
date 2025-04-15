@@ -1,4 +1,4 @@
-import { cartContext, CartItem } from "@/providers/CartProvider"
+import { cartContext } from "@/providers/CartProvider"
 import { useContext } from "react"
 import { useProducts } from "./useProducts"
 

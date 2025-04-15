@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { css, SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 import { sc } from '../global/styleConstants';
 import { useProducts } from '@/hooks/useProducts';
 import { PropVal } from '@/styled/1/PropVal';

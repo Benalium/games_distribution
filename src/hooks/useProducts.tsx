@@ -1,6 +1,5 @@
-import { useState, FC, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Product, SendedProduct } from "@/models/Product";
-import { respond } from "@/global/requests";
 
 import axios from "axios";
 

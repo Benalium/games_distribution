@@ -1,44 +1,39 @@
 import { Link } from 'react-router-dom';
 import { useProducts } from '@/hooks/useProducts';
-import { cartContext } from '@/providers/CartProvider';
 import { sc } from '@/global/styleConstants';
-import { css, SerializedStyles } from '@emotion/react';
 import { ProductStretched } from '@/styled/1/Product';
-import { Changeable } from '@/components/Changeable';
-import { useContext, MouseEvent, useState, ReactNode, useEffect } from 'react';
+import { useState, ReactNode } from 'react';
 import { Product as ProductModel, SendedProduct } from '@/models/Product';
 import { Button } from '@/styled/1/Button';
 import { Window } from '@/components/1/Window';
 import { AddProductForm } from '../components/1/AddProductForm';
 import { Menu } from '@/components/1/Menu';
-import { Menu as MenuIcon, Minus, Plus, ShoppingCart } from 'lucide-react';
-import { respond } from '@/global/requests';
+import { Menu as MenuIcon, ShoppingCart } from 'lucide-react';
 import { SelectableItem } from '@/styled/1/SelectableItem';
 import { CartItem } from '@/providers/CartProvider';
 import { Page } from '@/styled/1/Page';
 import { WindowTrigger } from '@/components/1/WindowTrigger';
 import { UpdateProductForm } from '@/components/1/UpdateProductForm';
 import styled from '@emotion/styled'
-import React from 'react';
 import { useCart } from '@/hooks/useCart';
 import { useAuthorization } from '@/hooks/useAuthorization';
 import { Counter } from '@/styled/1/Counter';
 import { CartIncrementer } from '@/components/1/CartCounter/CartIncrementer';
 import { CartDecrementer } from '@/components/1/CartCounter/CartDecrementer';
-const defaultProducts: ProductModel[] = [
-  {
-    name: "GTA Vice City",
-    price: 35,
-    id: 1,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-JVYkP1wsMX3aaGdR24V-gYpEBlwI7nSqQ&s"
-  },
-  {
-    name: "The Witcher",
-    price: 40,
-    id: 2,
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxVE2YCQjtQGNVZyIrrxviGA1KobyZUoFkQ&s'
-  }
-]
+// const defaultProducts: ProductModel[] = [
+//   {
+//     name: "GTA Vice City",
+//     price: 35,
+//     id: 1,
+//     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-JVYkP1wsMX3aaGdR24V-gYpEBlwI7nSqQ&s"
+//   },
+//   {
+//     name: "The Witcher",
+//     price: 40,
+//     id: 2,
+//     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxVE2YCQjtQGNVZyIrrxviGA1KobyZUoFkQ&s'
+//   }
+// ]
 const localStyled = {
   CartButton: () =>
     <Link to='/cart'>

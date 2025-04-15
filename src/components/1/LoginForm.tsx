@@ -2,33 +2,8 @@ import { sc } from "@/global/styleConstants"
 import { Button } from "@/styled/1/Button"
 import { Input } from "@/styled/1/Input"
 import { Form } from "@/styled/1/Form"
-import { css } from "@emotion/react"
-import { ChangeEvent, FormEvent, ReactNode, useState } from "react"
+import { ReactNode, useState } from "react"
 import { useAuthorization } from "@/hooks/useAuthorization"
-import { Link } from "react-router-dom"
-
-const logIn = async (
-  login: string,
-  password: string,
-  setWarningState: React.Dispatch<React.SetStateAction<boolean>>
-) => {
-  const response = await fetch('http://localhost:3000/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ login, password })
-  })
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === 'success') {
-        setWarningState(false)
-        window.location.href = data.redirect;
-      } else {
-        setWarningState(true)
-      }
-    })
-}
 
 const variants = {
   default: ({ loginPack, passwordPack, warningPack, onSubmit }: VariantProps) => {

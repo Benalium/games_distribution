@@ -11,7 +11,6 @@ const RegistrationForm = () => {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
-  const [warningState, setWarningState] = useState(false);
   const { register } = useAuthorization()
 
   return (

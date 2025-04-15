@@ -3,7 +3,6 @@ import { useContext, useEffect, useState } from "react";
 import { respond } from '@/global/requests';
 import { ProductStretched as ProductUI } from '@/styled/1/Product';
 import { Product } from '@/models/Product';
-import { useProducts } from '@/hooks/useProducts';
 import { Button } from '@/styled/1/Button';
 import { css } from '@emotion/react';
 import { sc } from '@/global/styleConstants';
@@ -12,8 +11,6 @@ import { Counter } from '@/styled/1/Counter';
 import { CartIncrementer } from '@/components/1/CartCounter/CartIncrementer';
 import { CartDecrementer } from '@/components/1/CartCounter/CartDecrementer';
 import { useCart } from '@/hooks/useCart';
-import { WindowTrigger } from '@/components/1/WindowTrigger';
-import { Window } from '@/components/1/Window';
 import { motion } from "framer-motion";
 import { useReceipts } from '@/hooks/useReceipts';
 
