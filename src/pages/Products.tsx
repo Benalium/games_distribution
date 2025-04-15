@@ -112,7 +112,7 @@ const localComponents = {
 }
 
 const mappedData = {
-  Products: ({ product, userRole, cartItem, addToCart, updateProduct, deleteProduct }: {
+  Product: ({ product, userRole, cartItem, addToCart, updateProduct, deleteProduct }: {
     product: ProductModel
     userRole: string | undefined
     cartItem: CartItem | undefined
@@ -165,19 +165,21 @@ const Products = () => {
   return (
     <Page>
       <localStyled.Header>
-        {user.role == "advanced" &&
-          <Button>
-            <Link to="/register">
+        {
+          user.role == "advanced" &&
+          <Link to="/register">
+            <Button>
               Register
-            </Link>
-          </Button>}
+            </Button>
+          </Link>
+        }
         {user.role == "advanced" && <localStyled.AddProductButton onClick={() => setIsAddProductWindowOpen(true)} />}
         <localStyled.CartButton />
       </localStyled.Header>
       {
         products.map(product => {
           const cartItem = cart.find(c => c.productId === product.id);
-          return (mappedData.Products({
+          return (mappedData.Product({
             product,
             userRole: user.role,
             cartItem,
